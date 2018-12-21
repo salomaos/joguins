@@ -1,3 +1,31 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body {
     background-color: silver;
+}
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#titulo-site {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+nav {
+    text-align: center;
+}
+
+li{
+    display: inline;
+    background-color: blue;
+    padding: 0.5rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
 }
