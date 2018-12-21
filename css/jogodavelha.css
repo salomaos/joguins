@@ -1,0 +1,57 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section {
+    width: 500px;
+    margin: auto;
+}
+#menu {
+    width: 450px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#jogadores {
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+#jogadores input {
+    padding: 10px;
+    vertical-align: middle;
+}
+#jogadores span {
+    background-color: blue;
+    padding: 6.5px 9px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    vertical-align: middle;
+}
+#menu button {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: blue;
+    background-color: transparent;
+    border: 2px solid blue;
+}
+#mensagem {
+    display: block;
+    padding: 10px;
+    height: 10px;
+}
+table {
+    width: 450px;
+    border: 2px solid black;
+    margin: 20px auto;
+}
+table td {
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 96px;
+    box-sizing: border-box;
+}
