@@ -3,18 +3,20 @@ $(document).ready(function () {
         var jogador1 = $("#jogador1").val();
         var jogador2 = $("#jogador2").val();
 
+        $("#mensagem").text("");
+
         if (jogador1.trim().length > 0 && jogador2.trim().length > 0) {
             $("table td").text("");
-            comecarJogo();
+            comecarJogo(jogador1, jogador2);
         } else {
-            console.log("Não está esquecendo de nada?");
+            $("#mensagem").text("Falta os nomes dos jogadores!");
         }
     });
 });
 
-function comecarJogo() {
+function comecarJogo(jogador1, jogador2) {
     let contadorJogadas = 0;
-
+    let spanMensagem = $("#mensagem");
     $("table td").click(function () {
         contadorJogadas++;
 
@@ -24,17 +26,25 @@ function comecarJogo() {
             } else {
                 $(this).text("X");
             }
-            if (verificaGanhador() == true) {
-                contadorJogadas = 9;
-            }
-            if (contadorJogadas == 9) {
-                $("#mensagem").text("O Jogo Acabou");
+
+            switch(verificaGanhador(contadorJogadas)){
+                case "O":
+                    spanMensagem.text("O jogador " + jogador1 + " ganhou o jogo!");
+                    break;
+                case "X":
+                    spanMensagem.text("O jogador " + jogador2 + " ganhou o jogo!");
+                    break;
+                case "V":
+                    spanMensagem.text("Deu Velha!");
+                    break;
+                default:
+                    console.log("Relaxa que está tudo bem");
             }
         }
     });
 }
 
-function verificaGanhador() {
+function verificaGanhador(contadorJogadas) {
     let referencia = [
         [0, 1, 2],
         [3, 4, 5],
@@ -61,8 +71,24 @@ function verificaGanhador() {
     });
 
     for(var i = 0; i < referencia.length; i++){
-        for(var j = 0; i <referencia[i].length; j++){
-            
+        var contadorX = 0;
+        var contadorO = 0;
+        for(var j = 0; j < referencia[i].length; j++){
+            if(x[referencia[i][j]] == referencia[i][j]){
+                contadorX++;
+            }
+            if(o[referencia[i][j]] == referencia[i][j]){
+                contadorO++;
+            }
         }
+        if(contadorO == 3){
+            return "O";
+        }
+        else if(contadorX == 3){
+            return "X";
+        }
+    }
+    if (contadorJogadas == 9){
+        return "V";
     }
 }

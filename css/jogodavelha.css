@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: tomato;
 }
 section {
     width: 500px;
@@ -14,8 +15,9 @@ section {
 #jogadores {
     padding: 10px;
     margin: 10px 0 20px;
-    border: 2px solid black;
+    border: 2px inset white;
     text-align: center;
+    background-color: blue;
 }
 #jogadores input {
     padding: 10px;
@@ -32,26 +34,40 @@ section {
 #menu button {
     padding: 10px;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: bolder;
     color: blue;
     background-color: transparent;
-    border: 2px solid blue;
+    border: 3px solid blue;
+}
+#menu button:hover{
+    cursor: pointer;
+}
+#menu button:active {
+    background-color: blue;
+    color: white;
 }
 #mensagem {
     display: block;
-    padding: 10px;
+    padding: 10px 10px 15px;
     height: 10px;
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+    border: 5px inset white;
 }
 table {
     width: 450px;
-    border: 2px solid black;
+    border: 5px inset white;
     margin: 20px auto;
 }
 table td {
-    border: 2px solid black;
+    border: 5px inset white;
     width: 150px;
     height: 150px;
     text-align: center;
     font-size: 96px;
     box-sizing: border-box;
+    color: white;
+    background-color: blue;
+    font-weight: 900;
 }
