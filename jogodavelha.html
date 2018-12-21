@@ -11,28 +11,33 @@
     <title>Jogo da Velha</title>
 </head>
 <body>
-    <section id="jogadores">
-        <span class="time">O</span><input type="text" /><span id="versus"> x</span>
-        <input type="text" /><span class="time">X</span>
-    </section>
-    <section id="jogo">
-        <table>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </section>
+    <div class="container">
+        <section id="menu">
+            <div id="jogadores">
+                <span class="time">O</span><input type="text" name="jogador1" placeholder="Nome do jogador 1" id="jogador1" /><span id="versus">x</span><input type="text" name="jogador2" placeholder="Nome do jogador 2" id="jogador2" /><span class="time">X</span>
+            </div>
+            <button id="btn-comecar">Começar</button>
+            <span id="mensagem"></span>
+        </section>
+        <section id="jogo">
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+    </div> 
 </body>
 </html>
