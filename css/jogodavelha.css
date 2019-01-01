@@ -1,27 +1,32 @@
 html {
     box-sizing: border-box;
     font-family: sans-serif;
-    background-color: tomato;
+    background-color: blue;
 }
 section {
     width: 500px;
     margin: auto;
 }
 #menu {
-    width: 450px;
     box-sizing: border-box;
     text-align: center;
 }
 #jogadores {
-    padding: 10px;
+    padding: 20px 0 30px;
     margin: 10px 0 20px;
-    border: 2px inset white;
+    border-bottom: 5px solid rgba(0, 0, 128, .7);
     text-align: center;
     background-color: blue;
 }
 #jogadores input {
     padding: 10px;
     vertical-align: middle;
+    border-radius: 10px;
+    border-bottom: 5px solid navy;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 150px;
 }
 #jogadores span {
     background-color: blue;
@@ -32,12 +37,12 @@ section {
     vertical-align: middle;
 }
 #menu button {
-    padding: 10px;
+    padding: 10px 30px;
     margin-bottom: 10px;
-    font-weight: bolder;
-    color: blue;
+    color: #ffffff;
     background-color: transparent;
-    border: 3px solid blue;
+    border: 5px solid rgba(0, 0, 128, .7);
+    font-size: 18px;
 }
 #menu button:hover{
     cursor: pointer;
@@ -50,24 +55,24 @@ section {
     display: block;
     padding: 10px 10px 15px;
     height: 10px;
-    background-color: blue;
-    color: white;
-    font-weight: bolder;
-    border: 5px inset white;
+    color: #565cff;
 }
 table {
     width: 450px;
-    border: 5px inset white;
     margin: 20px auto;
 }
 table td {
-    border: 5px inset white;
     width: 150px;
     height: 150px;
     text-align: center;
     font-size: 96px;
     box-sizing: border-box;
     color: white;
-    background-color: blue;
     font-weight: 900;
+}
+.border-top {
+    border-top: 10px solid rgba(0, 0, 128, .7);
+}
+.border-right {
+    border-right: 10px solid rgba(0, 0, 128, .7);;
 }
